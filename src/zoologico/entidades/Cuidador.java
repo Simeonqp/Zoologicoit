@@ -16,14 +16,16 @@ import zoologico.entidades.Persona;
 public class Cuidador extends Persona{
     private int cantidadDeRaciones;
     
-    public Cuidador(String nombre, Date fechaDeNacimiento, 
-            int cantidadDeRaciones){
+    public Cuidador(String nombre, String fechaDeNacimiento, int cantidadDeRaciones){
         //super(nombre, fechaDeNacimiento);
     }
     public Cuidador(int unaCantidad){
         this.cantidadDeRaciones = unaCantidad;
     }
     public void alimentarAnimales(){
+        Cuidador c = new Cuidador("Juan","1976",5);
+        c.getFechaDeNacimiento();
+        System.out.println(c.cantidadDeRaciones);
         int cantidadNecesaria = Zoologico.CANTIDAD_ANIMALES * Zoologico.RACIONES_POR_ANIMAL;
         int sobranFaltante = cantidadDeRaciones - cantidadNecesaria;
         String mensaje = "";
