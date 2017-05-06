@@ -9,16 +9,16 @@ package zoologico;
  *
  * @author educacionit
  */
-public class Cuidador extends Persona{
-    private int cantidadDeRaciones;
-    
-    public Cuidador(){
-        
+public class Programa {
+    public Programa(){
+                       
     }
-    public Cuidador(int unaCantidad){
-        this.cantidadDeRaciones = unaCantidad;
-    }
-    public void alimentarAnimales(){
+    public static void main(String[] args) {
+        Zoologico zoo = new Zoologico();
+        zoo.abrir();
         
+        zoo.alimentarAnimales(5);
+        
+        zoo.cerrar();
     }
 }
